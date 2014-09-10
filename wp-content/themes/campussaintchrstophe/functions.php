@@ -92,11 +92,13 @@ add_action( 'widgets_init', 'campussaintchrstophe_widgets_init' );
  * Enqueue scripts and styles.
  */
 function campussaintchrstophe_scripts() {
-	wp_enqueue_style( 'campussaintchrstophe-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'campussaintchrstophe-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'campussaintchrstophe-style', get_template_directory_uri() . '/css/global.css' );
 
-	wp_enqueue_script( 'campussaintchrstophe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'campussaintchrstophe-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'campussaintchrstophe-jquery', get_template_directory_uri() . '/js/jquery-1.11.1.min.js');
+	wp_enqueue_script( 'campussaintchrstophe-global', get_template_directory_uri() . '/js/global.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
