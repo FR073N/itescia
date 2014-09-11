@@ -23,23 +23,45 @@
 	<header id="masthead" class="header" role="banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<a href="" class="header-intranet">Intranet du campus</a>
-					<div class="header-lang">
+				<div class="col-lg-4 col-md-3 col-sm-3 col-xs-2">
+					<a href="" class="header-intranet hidden-xs">Intranet <span class="hidden-sm hidden-xs">du campus</span></a>
+					<div class="header-lang hidden-xs">
 						<?php do_action('icl_language_selector'); ?>
 					</div>
+					<a href="#" class="header-mobile-button visible-xs visible-sm">
+						Menu
+						<span class="icon-menu"></span>
+					</a>
 					
 				</div>
-				<div class="col-md-4">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo">
+				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo img-responsive">
 						<img src="<?php echo get_template_directory_uri().'/img/logo.png'; ?>" />
 					</a>
 				</div>
-				<div class="col-md-4"></div>
+				<div class="col-lg-4 col-md-3 col-sm-3 col-xs-2">
+					<div class="header-lang visible-xs">
+						<?php do_action('icl_language_selector'); ?>
+					</div>
+					<div class="header-social">
+						<ul>
+							<?php if(get_field('facebook','option')): ?>
+								<li>
+									<a href="<?php the_field('facebook', 'option'); ?>" class="social-facebook"></a>
+								</li>
+							<?php endif; ?>
+							<?php if(get_field('mail','option')): ?>
+								<li class="visible-xs">
+									<a href="<?php the_field('mail', 'option'); ?>" class="social-mail"></a>
+								</li>
+							<?php endif; ?>
+						</ul>
+						
+					</div>
+				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="header-navigation">
+			<div class="navigation-wrapper">
+				<div class="header-navigation">
 						<ul>
 							<li><a href="">News</a></li>
 							<li><a href="">Technopôle</a></li>

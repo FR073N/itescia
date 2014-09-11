@@ -1,18 +1,145 @@
-.header-navigation {
+@include media(desktop-only){
+	.header-navigation {
+		margin-bottom: -3px;
+		height:35px;
+		> ul {
+			> li {
+				float:left;
+				margin-right: 35px;
+				height:35px;
+				position:relative;
+				
+				> a {
+					color: $darkgrey;
+					font-family: "Eagle";
+					font-size: em(17);
+					text-transform: uppercase;
 
+					border-bottom:7px solid transparent;
+					display:block;
+					height:100%;
+				}
+
+				@include media(laptop){
+					margin-right:25px;
+
+					> a {
+						font-size:em(14);
+					}
+				}
+
+				&:hover {
+					> a {
+						color: $bluegreen;
+						text-decoration: none;
+						border-bottom:7px solid $bluegreen;
+					}
+
+					> ul {
+						display:block;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				> ul {
+					display:none;
+					position:absolute;
+					left:0;
+					top:100%;
+					background-color:orange;
+
+					> li {
+						font-family: "Eagle";
+						font-weight: 300;
+						font-size: em(18);
+
+						height: 45px;
+						width: 190px;
+						line-height: 45px;
+						padding-left: 20px;
+
+						> a {
+							color: #3b3b3b; /* text color */
+
+							&:hover {
+								color:$bluegreen;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-.header-navigation ul {
 
-}
+@include media(tablet-only){
+	.header-navigation {
+		position:absolute;
+		top:0;
+		right:100%;
 
-.header-navigation ul li {
-	float:left;
-}
+		width:25%;
+		height:100%;
+	
+		@include media(tablet){
+            width:50%;
+        }
 
-.header-navigation ul li a {
-	color: $darkgrey;
-	font-family: "Eagle";
-	font-size: 17px;
-	text-transform: uppercase;	
+		@include media(mobile){
+			width:75%;
+		}
+
+		&.header-navigation--on {
+			top:0;
+			left:0;
+			right:inherit;
+		}
+
+		> ul {
+			> li {
+
+				
+				> a {
+
+				}
+
+				@include media(tablet){
+
+				}
+
+				&:hover {
+					> a {
+
+					}
+
+					> ul {
+
+					}
+				}
+
+				&:last-child {
+				}
+
+				> ul {
+
+
+					> li {
+
+
+						> a {
+
+							&:hover {
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -11,6 +11,7 @@
  * Config saved to config.json and https://gist.github.com/0ecc57f6da650e064088
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+@import "http://fonts.googleapis.com/css?family=Montserrat:400,700";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1525,6 +1526,12 @@ a {
   src: url("fonts/eagle-book.eot") format("embedded-opentype"), url("fonts/eagle-book.woff2") format("woff2"), url("fonts/eagle-book.woff") format("woff"), url("fonts/eagle-book.ttf") format("truetype"), url("fonts/eagle-book.svg#EagleBookRegular") format("svg");
 }
 @font-face {
+  font-family: 'Eagle';
+  font-weight: 300;
+  src: url("fonts/eagle-light.eot");
+  src: url("fonts/eagle-light.eot") format("embedded-opentype"), url("fonts/eagle-light.woff2") format("woff2"), url("fonts/eagle-light.woff") format("woff"), url("fonts/eagle-light.ttf") format("truetype"), url("fonts/eagle-light.svg#EagleLightRegular") format("svg");
+}
+@font-face {
   font-family: 'Gotham';
   font-weight: normal;
   src: url("fonts/gotham-book.eot");
@@ -1544,6 +1551,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
+  position: relative;
+}
+body.menu-on {
+  margin-left: 25%;
+}
+@media screen and (max-width: 62em) and (min-width: 48em) {
+  body.menu-on {
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 48em) {
+  body.menu-on {
+    margin-left: 75%;
+  }
 }
 
 input, textarea {
@@ -1563,24 +1584,180 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 /* STYLES LIBS */
 /* MODULES COMMUNS ET RECURENTS */
 .header {
-  border-bottom: 2px solid #dddedf;
+  border-bottom: 3px solid #dddedf;
   margin-bottom: 10px;
+  padding-top: 10px;
 }
 
 .header-logo {
-  margin-top: 15px;
-  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 35px;
+  display: table;
+}
+.header-logo img {
+  max-width: 100%;
 }
 
-.header-navigation ul li {
+.header-intranet {
+  background-color: #d8d8d8;
+  color: #fff;
+  font-size: 0.8125em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5em 0.625em;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.header-lang #lang_sel_list ul li {
+  padding-right: 5px !important;
+}
+.header-lang #lang_sel_list ul li a {
+  color: #3f3f41;
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+.header-lang #lang_sel_list ul li a.lang_sel_sel {
+  color: #008573;
+  /* text color */
+}
+.header-lang #lang_sel_list ul li a:hover {
+  text-decoration: underline !important;
+}
+.header-lang #lang_sel_list ul li:first-child {
+  border-right: 1px solid #3f3f41;
+}
+
+.header-mobile-button {
+  color: #3f3f41;
+  /* text color */
+  font-family: "Montserrat";
+  font-size: 1.0625em;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 60px;
+  text-align: center;
+}
+.header-mobile-button:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.header-mobile-button span.icon-menu {
+  width: 36px;
+  height: 26px;
+  background: url("../img/icon-menu.png") no-repeat;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.header-social ul li {
   float: left;
 }
+.header-social ul li a {
+  width: 34px;
+  height: 40px;
+  display: block;
+}
+.header-social ul li a.social-facebook {
+  background: url("../img/social-facebook.png") no-repeat;
+}
+.header-social ul li a.social-mail {
+  background: url("../img/social-mail.png") no-repeat;
+}
 
-.header-navigation ul li a {
-  color: #3f3f41;
-  font-family: "Eagle";
-  font-size: 17px;
-  text-transform: uppercase;
+@media screen and (min-width: 62em) {
+  .header-navigation {
+    margin-bottom: -3px;
+    height: 35px;
+  }
+  .header-navigation > ul > li {
+    float: left;
+    margin-right: 35px;
+    height: 35px;
+    position: relative;
+  }
+  .header-navigation > ul > li > a {
+    color: #3f3f41;
+    font-family: "Eagle";
+    font-size: 1.0625em;
+    text-transform: uppercase;
+    border-bottom: 7px solid transparent;
+    display: block;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 62em) and (max-width: 75em) and (min-width: 62em) {
+  .header-navigation > ul > li {
+    margin-right: 25px;
+  }
+  .header-navigation > ul > li > a {
+    font-size: 0.875em;
+  }
+}
+@media screen and (min-width: 62em) {
+  .header-navigation > ul > li:hover > a {
+    color: #008573;
+    text-decoration: none;
+    border-bottom: 7px solid #008573;
+  }
+  .header-navigation > ul > li:hover > ul {
+    display: block;
+  }
+  .header-navigation > ul > li:last-child {
+    margin-right: 0;
+  }
+  .header-navigation > ul > li > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: orange;
+  }
+  .header-navigation > ul > li > ul > li {
+    font-family: "Eagle";
+    font-weight: 300;
+    font-size: 1.125em;
+    height: 45px;
+    width: 190px;
+    line-height: 45px;
+    padding-left: 20px;
+  }
+  .header-navigation > ul > li > ul > li > a {
+    color: #3b3b3b;
+    /* text color */
+  }
+  .header-navigation > ul > li > ul > li > a:hover {
+    color: #008573;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 62em) {
+  .header-navigation {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 25%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 62em) and (max-width: 62em) and (min-width: 48em) {
+  .header-navigation {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 62em) and (max-width: 48em) {
+  .header-navigation {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 62em) {
+  .header-navigation.header-navigation--on {
+    top: 0;
+    left: 0;
+    right: inherit;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
