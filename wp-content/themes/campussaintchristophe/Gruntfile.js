@@ -4,10 +4,15 @@ module.exports = function(grunt){
 	    sass: {
 	      dist: {
 	        options: {
-	          sassDir: 'scss',
-	          cssDir: 'css',
-	          environment: 'development',
+	          style: 'expanded'
 	        },
+	        files: [{
+			    expand: true,
+			    cwd: 'scss',
+			    src: ['**/*.scss'],
+			    dest: 'css',
+			    ext: '.css'
+			}]
 	      },
 	    },
 	    copy: {
