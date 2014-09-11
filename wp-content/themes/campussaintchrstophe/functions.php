@@ -5,6 +5,29 @@
  * @package campussaintchrstophe
  */
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Paramètres globaux du theme',
+		'menu_title'	=> 'Paramètres du thème',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Réseaux sociaux',
+		'menu_title'	=> 'Réseaux sociaux',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
