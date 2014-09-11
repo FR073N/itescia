@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Eagle';
+    font-weight: normal;
+    src: url('fonts/eagle-book.eot');
+    src: url('fonts/eagle-book.eot') format('embedded-opentype'),
+         url('fonts/eagle-book.woff2') format('woff2'),
+         url('fonts/eagle-book.woff') format('woff'),
+         url('fonts/eagle-book.ttf') format('truetype'),
+         url('fonts/eagle-book.svg#EagleBookRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'Gotham';
+    font-weight: normal;
+    src: url('fonts/gotham-book.eot');
+    src: url('fonts/gotham-book.eot') format('embedded-opentype'),
+         url('fonts/gotham-book.woff2') format('woff2'),
+         url('fonts/gotham-book.woff') format('woff'),
+         url('fonts/gotham-book.ttf') format('truetype'),
+         url('fonts/gotham-book.svg#GothamBook') format('svg');
+}

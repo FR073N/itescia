@@ -1,0 +1,42 @@
+/* PARAMETRES DES SECTIONS : DEBUT */
+
+$darkgrey : #3f3f41;
+
+@mixin media($point) {
+   @if $point == tabletonly {
+     @media screen and (min-width: em(600)) and (max-width : em(900)) { @content ; }
+  }
+   @else if $point == tablet {
+     @media screen and (min-width : em(960)) { @content ; }
+  }
+   @else if $point == desktop {
+     @media screen and (min-width: em(900))  { @content ; }
+  }
+}
+
+
+/* PARAMETRES DES SECTIONS : FIN */
+@import 'bourbon/bourbon';
+@import 'libs/bootstrap';
+
+/* CSS RESET */
+@import 'core/reset';
+
+/* GESTION DES TYPOS ET DE L'ICONSET */
+@import 'fonts/fonts';
+
+/* WEBSITE STRUCTURE */
+@import 'core/structure';
+
+/* STYLES COMMUNS */
+@import 'commons/common';
+
+/* STYLES LIBS */
+
+/* MODULES COMMUNS ET RECURENTS */
+@import 'commons/header';
+@import 'commons/navigation';
+@import 'commons/footer';
+@import 'commons/breadcrumb';
+@import 'commons/pushes';
+@import 'commons/pagination';
