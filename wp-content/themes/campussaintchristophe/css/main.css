@@ -1609,24 +1609,42 @@ input:-webkit-autofill, textarea:-webkit-autofill {
   margin-bottom: 10px;
   display: inline-block;
 }
-
-.header-lang #lang_sel_list ul li {
-  padding-right: 5px !important;
+@media screen and (max-width: 62em) {
+  .header-intranet {
+    margin-left: 60px;
+  }
 }
-.header-lang #lang_sel_list ul li a {
-  color: #3f3f41;
+
+.header-lang {
+  clear: both;
+  width: 58px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 62em) {
+  .header-lang {
+    margin-left: 60px;
+  }
+}
+.header-lang .lang_sel_list li {
+  padding-right: 5px !important;
   text-transform: uppercase;
   font-size: 0.875em;
+  float: left;
+  padding-left: 5px;
 }
-.header-lang #lang_sel_list ul li a.lang_sel_sel {
+.header-lang .lang_sel_list li a {
+  color: #3f3f41;
+}
+.header-lang .lang_sel_list li a:hover {
+  text-decoration: underline !important;
+}
+.header-lang .lang_sel_list li.lang_sel_sel {
   color: #008573;
   /* text color */
 }
-.header-lang #lang_sel_list ul li a:hover {
-  text-decoration: underline !important;
-}
-.header-lang #lang_sel_list ul li:first-child {
+.header-lang .lang_sel_list li:first-child {
   border-right: 1px solid #3f3f41;
+  padding-left: 0;
 }
 
 .header-mobile-button {
@@ -1638,6 +1656,13 @@ input:-webkit-autofill, textarea:-webkit-autofill {
   text-transform: uppercase;
   width: 60px;
   text-align: center;
+}
+@media screen and (max-width: 62em) and (min-width: 48em) {
+  .header-mobile-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 .header-mobile-button:hover {
   text-decoration: none;
@@ -1652,6 +1677,10 @@ input:-webkit-autofill, textarea:-webkit-autofill {
   margin-top: 5px;
 }
 
+.header-social {
+  clear: both;
+  margin-right: 20px;
+}
 .header-social ul li {
   float: left;
 }

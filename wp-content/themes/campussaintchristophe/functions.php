@@ -4,6 +4,23 @@
  *
  * @package Campus Saint Christophe
  */
+
+function language_selector(){
+	$languages = icl_get_languages('skip_missing=0&orderby=code');
+	if(!empty($languages)){
+			echo '<ul class="lang_sel_list">';
+		foreach($languages as $l){
+			echo '<li'. ($l['active']?' class="lang_sel_sel"':'') .'>';
+			if(!$l['active']) echo '<a href="'.$l['url'].'">';
+				echo ''.$l['language_code'].'';
+			if(!$l['active']) echo '</a>';
+				echo '</li>';
+		}
+	}
+	echo '</ul>';
+}
+
+
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(

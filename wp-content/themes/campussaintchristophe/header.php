@@ -24,14 +24,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-3 col-sm-3 col-xs-2">
-					<a href="" class="header-intranet hidden-xs">Intranet <span class="hidden-sm hidden-xs">du campus</span></a>
-					<div class="header-lang hidden-xs">
-						<?php do_action('icl_language_selector'); ?>
-					</div>
-					<a href="#" class="header-mobile-button visible-xs visible-sm">
+					<a href="#" class="header-mobile-button visible-xs visible-sm pull-left">
 						Menu
 						<span class="icon-menu"></span>
 					</a>
+					
+					<a href="" class="header-intranet hidden-xs pull-left">Intranet <span class="hidden-sm hidden-xs">du campus</span></a>
+					<div class="header-lang hidden-xs pull-left">
+						<?php language_selector(); ?>
+					</div>
 					
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
@@ -40,19 +41,23 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-3 col-sm-3 col-xs-2">
-					<div class="header-lang visible-xs">
-						<?php do_action('icl_language_selector'); ?>
+					<div class="header-weather pull-right hidden-xs">
+						<img src="<?php echo get_template_directory_uri().'/img/weather.png'; ?>" />
 					</div>
-					<div class="header-social">
+
+					<div class="header-lang visible-xs pull-right">
+						<?php language_selector(); ?>
+					</div>
+					<div class="header-social pull-right">
 						<ul>
 							<?php if(get_field('facebook','option')): ?>
-								<li>
-									<a href="<?php the_field('facebook', 'option'); ?>" class="social-facebook"></a>
+								<li class="hidden-xs">
+									<a href="<?php the_field('facebook', 'option'); ?>" target="_blank" class="social-facebook"></a>
 								</li>
 							<?php endif; ?>
-							<?php if(get_field('mail','option')): ?>
+							<?php if(get_field('email','option')): ?>
 								<li class="visible-xs">
-									<a href="<?php the_field('mail', 'option'); ?>" class="social-mail"></a>
+									<a href="mailto:<?php the_field('email', 'option'); ?>" target="_blank" class="social-mail"></a>
 								</li>
 							<?php endif; ?>
 						</ul>
