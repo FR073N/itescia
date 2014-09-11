@@ -1,0 +1,10 @@
+dev:
+    scheme: sftp
+    host: campussaintchristophe.com
+    port: 22
+    user: eurosic
+    pass: zfgr48sdfrDFFF454
+    check: true
+    path:
+        local: /
+        remote: www/
