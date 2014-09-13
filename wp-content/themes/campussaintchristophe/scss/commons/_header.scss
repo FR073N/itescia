@@ -13,6 +13,10 @@
 	img {
 		max-width: 100%;
 	}
+
+	@include media(mobile){
+		margin-bottom: 15px;
+	}
 }
 
 .header-intranet {

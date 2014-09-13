@@ -78,14 +78,39 @@
 
 
 @include media(tablet-only){
+	.navigation-wrapper {
+		font-family:"Eagle";
+		font-weight:300;
+	}
+	.mobile-navigation-header {
+
+	}
+
+	.mobile-navigation-close {
+		float:left;
+	}
+
+	.mobile-navigation-title {
+		opacity:0.66; // layer alpha
+		color: #fff;
+		font-size: em(18);
+		text-transform: uppercase;
+		float:right;
+	}
+
 	.header-navigation {
 		position:absolute;
 		top:0;
 		right:100%;
+		z-index:10000;
+		background:url('../img/tablet-menu.jpg') repeat;
+		background-position:center;
 
 		width:25%;
 		height:100%;
-	
+
+		padding:34px;
+
 		@include media(tablet){
             width:50%;
         }
@@ -101,11 +126,20 @@
 		}
 
 		> ul {
+			clear:both;
+			float:none;
 			> li {
+				font-family: "Eagle";
+				font-size: em(25);
+				font-weight: 300;
+				margin-bottom: 40px;
 
-				
+				&:first-letter {
+					text-transform: uppercase;
+				}
+
 				> a {
-
+					color:#fff;
 				}
 
 				@include media(tablet){
@@ -126,16 +160,24 @@
 				}
 
 				> ul {
-
+					padding-top:35px;
+					padding-left: 55px;
 
 					> li {
-
-
+						opacity:0.5; // layer alpha
+						font-family: "Eagle";
+						font-size: em(12);
+						margin-bottom: 20px;
+						
 						> a {
-
+							color: #fff;
 							&:hover {
 
 							}
+						}
+
+						&:last-child {
+							margin-bottom: 0;
 						}
 					}
 				}

@@ -67,6 +67,10 @@
 			</div>
 			<div class="navigation-wrapper">
 				<div class="header-navigation">
+						<div class="mobile-navigation-header">
+							<a href="" class="mobile-navigation-close">Fermer</a>
+							<span class="mobile-navigation-title">Navigation</span>
+						</div>
 						<ul>
 							<li><a href="">News</a></li>
 							<li><a href="">Technopôle</a></li>
@@ -87,6 +91,9 @@
 							<li><a href="">galerie</a></li>
 							<li><a href="">contact</a></li>
 						</ul>
+						<div class="mobile-navigation-footer">
+							<span>Copyright 2014 - All rights reserved</span>
+						</div>
 					</div>
 				</div>
 			</div>

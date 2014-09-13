@@ -2,6 +2,7 @@
 
 $darkgrey : #3f3f41;
 $bluegreen : #008573;
+$yellow : #becf00;
 
 @mixin media($point) {
    @if $point == mobile {

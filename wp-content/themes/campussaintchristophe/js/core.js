@@ -44,8 +44,10 @@ var $jQuery = jQuery.noConflict();
 				
 				$jQuery('body').toggleClass('menu-on');
 				$jQuery('.header-navigation').toggleClass('header-navigation--on');
-
+				$jQuery('.header-navigation').height($jQuery(document).height() - 68);
 			});
+
+
 
 		}
 
