@@ -4,12 +4,15 @@
 	box-sizing: border-box;
 }
 
+html {
+    background: #3c3c3d;
+}
 body{
     font-weight: normal;
     font-family: 'Gotham';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #fff;
+    background:#fff;
 }
 
 input, textarea{
@@ -25,3 +28,4 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     -webkit-text-fill-color: #888;
 }
+

@@ -1580,6 +1580,10 @@ a {
   box-sizing: border-box;
 }
 
+html {
+  background: #3c3c3d;
+}
+
 body {
   font-weight: normal;
   font-family: 'Gotham';
@@ -1608,6 +1612,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
   border-bottom: 3px solid #dddedf;
   margin-bottom: 10px;
   padding-top: 10px;
+  background: #fff;
 }
 
 .header-logo {
@@ -1742,6 +1747,9 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     display: block;
     height: 100%;
   }
+  .header-navigation > ul > li > a .nav-icon {
+    display: none;
+  }
 }
 @media screen and (min-width: 62em) and (max-width: 75em) and (min-width: 62em) {
   .header-navigation > ul > li {
@@ -1787,6 +1795,12 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     color: #008573;
     text-decoration: none;
   }
+  .header-navigation .mobile-navigation-header {
+    display: none;
+  }
+  .header-navigation .mobile-navigation-footer {
+    display: none;
+  }
 }
 @media screen and (max-width: 62em) {
   .navigation-wrapper {
@@ -1794,14 +1808,37 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     font-weight: 300;
   }
 
+  .mobile-navigation-header {
+    display: block;
+    border-bottom: 1px solid #5a5d5a;
+    padding-bottom: 35px;
+    margin-bottom: 45px;
+  }
+
+  .mobile-navigation-footer {
+    display: block;
+    border-top: 1px solid #5a5d5a;
+    padding: 20px 0;
+  }
+  .mobile-navigation-footer span {
+    color: #7a7b71;
+    display: block;
+    text-align: center;
+  }
+
   .mobile-navigation-close {
     float: left;
+    background: url("../img/nav-mobile-close.png") no-repeat;
+    width: 24px;
+    height: 23px;
+    display: block;
+    text-indent: -999999px;
   }
 
   .mobile-navigation-title {
     opacity: 0.66;
     color: #fff;
-    font-size: 1.125em;
+    font-size: 1.375em;
     text-transform: uppercase;
     float: right;
   }
@@ -1849,10 +1886,31 @@ input:-webkit-autofill, textarea:-webkit-autofill {
   }
   .header-navigation > ul > li > a {
     color: #fff;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .header-navigation > ul > li > a .nav-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.75em;
+    height: 28px;
+    line-height: 24px;
+  }
+  .header-navigation > ul > li > a .nav-icon.nav-icon-less {
+    display: none;
+  }
+  .header-navigation > ul > li.active > a .nav-icon-plus {
+    display: none;
+  }
+  .header-navigation > ul > li.active > a .nav-icon-less {
+    display: block;
   }
   .header-navigation > ul > li > ul {
     padding-top: 35px;
     padding-left: 55px;
+    display: none;
   }
   .header-navigation > ul > li > ul > li {
     opacity: 0.5;

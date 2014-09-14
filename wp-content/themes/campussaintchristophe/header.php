@@ -70,12 +70,22 @@
 						<div class="mobile-navigation-header">
 							<a href="" class="mobile-navigation-close">Fermer</a>
 							<span class="mobile-navigation-title">Navigation</span>
+							<div class="clearfix"></div>
 						</div>
 						<ul>
-							<li><a href="">News</a></li>
-							<li><a href="">Technopôle</a></li>
+							<li><a href="">News<span class="nav-icon">></span></a></li>
 							<li>
-								<a href="">Services</a>
+								<a href="">Technopôle
+									<span class="nav-icon nav-icon-plus">+</span>
+									<span class="nav-icon nav-icon-less">-</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Services
+									<span class="nav-icon nav-icon-plus">+</span>
+									<span class="nav-icon nav-icon-less">-</span>
+								</a>
 								<ul>
 									<li><a href="">Restauration</a></li>
 									<li><a href="">Crèche</a></li>
@@ -84,12 +94,17 @@
 									<li><a href="">Autres services</a></li>
 								</ul>
 							</li>
-							<li><a href="">Cadre de vie</a></li>
-							<li><a href="">écologie</a></li>
-							<li><a href="">localisation</a></li>
-							<li><a href="">disponibilités</a></li>
-							<li><a href="">galerie</a></li>
-							<li><a href="">contact</a></li>
+							<li>
+								<a href="">Cadre de vie
+									<span class="nav-icon nav-icon-plus">+</span>
+									<span class="nav-icon nav-icon-less">-</span>
+								</a>
+							</li>
+							<li><a href="">écologie<span class="nav-icon nav-icon-plus">+</span></a></li>
+							<li><a href="">localisation<span class="nav-icon">></span></a></li>
+							<li><a href="">disponibilités<span class="nav-icon">></span></a></li>
+							<li><a href="">galerie<span class="nav-icon nav-icon-plus">+</span></a></li>
+							<li><a href="">contact<span class="nav-icon">></span></a></li>
 						</ul>
 						<div class="mobile-navigation-footer">
 							<span>Copyright 2014 - All rights reserved</span>

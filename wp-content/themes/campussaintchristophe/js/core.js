@@ -35,20 +35,31 @@ var $jQuery = jQuery.noConflict();
 
 		},
 
+		setMenuHeight: function(){
+			$jQuery('.header-navigation').height($jQuery(document).height() - 68);
+		},
+
 		menuMobile: function(){
 
-			var item 	= $jQuery('.header-mobile-button');
+			var item 	= $jQuery('.header-mobile-button, .mobile-navigation-close');
 
 			item.on('click', function(e){
 				e.preventDefault();
 				
 				$jQuery('body').toggleClass('menu-on');
 				$jQuery('.header-navigation').toggleClass('header-navigation--on');
-				$jQuery('.header-navigation').height($jQuery(document).height() - 68);
+				core.styles.setMenuHeight();
 			});
 
+			var menuParent = $jQuery('.header-navigation ul li:has(>ul)');
 
-
+			menuParent.on('click', function(e){
+				e.preventDefault();
+				$jQuery(this).children('ul').slideToggle("slow",function(){
+					core.styles.setMenuHeight();	
+				});
+				$jQuery(this).toggleClass('active');
+			});
 		}
 
 	};
