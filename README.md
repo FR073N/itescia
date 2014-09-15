@@ -1,12 +1,12 @@
 ## Installation du projet
 
-#### Mamp ou Wamp
+### Mamp ou Wamp
 D'abord il faut installer mamp ou wamp sur votre PC/MAC, ou alors utiliser Vagrant si vous le souhaitez, ca ne change rien il faut un peu plus de config.
 
-#### Recuperer le depôt
+### Recuperer le depôt
 Pour récuperer le depot, telechargez et installez le logiciel github. Connectez vous et clonez le depot vers le dossier wamp/mamp (C:/wamp/www)
 
-#### Configurer le nom de domaine
+### Configurer le nom de domaine
 Pour travailler avec une base de donnée commune aux projets, il faut rediriger le nom de domaine www.campussaintchristophe.com vers votre localhost.
 Pour cela il faut modifier le fichier hosts de votre machine.
 
@@ -17,6 +17,10 @@ Pour cela il faut modifier le fichier hosts de votre machine.
 Enfin vous inserez ce code à la fin du fichier
 
      127.0.0.1 campussaintchristophe.com
+
+### Configurer la base de données
+Créez une base de données avec phpmyadmin, nommez la eurosic et importez le fichier sql present dans le depot.
+Ensuite rendez-vous dans le fichier wp-config.php et mettez à jour les informations de base de données selon votre configuration. (Wamp login : root, Wamp password : '')
 
 ## Configuration du projet
 
