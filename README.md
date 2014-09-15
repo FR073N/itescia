@@ -54,9 +54,3 @@ Lancez la console et tapez :
 > npm install -g grunt-cli
 
 Si tout se passe bien, lorsque vous tapez "grunt" dans la console, vous avez une reponse et pas un message "Commmande introuvable".
-
-Une fois tout installé, vous pouvez vous rendre dans le dossier 
-> C:/wamp/www/itescia/wp-content/theme/campussaintchristophe/
-
-Et taper la commande 
-> grunt watch
