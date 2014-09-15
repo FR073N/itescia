@@ -24,6 +24,15 @@ Ensuite rendez-vous dans le fichier wp-config.php et mettez à jour les informat
 
 ## Configuration du projet
 
+### Ruby et Sass
+
+#### Ruby
+Pour installer ruby sur windows il existe un installer : http://rubyinstaller.org/
+
+#### Sass
+
+> gem install sass
+
 ### Nodejs et Grunt
 Pour le css du site, nous allons utiliser un outil qui s'appel SASS, il rajoute des fonctionnalités aux fichiers css (Fonctions, Variables, Imbrication des classes, Inclusion de css dans d'autres css) et qui fait gagner un temps enorme.
 
@@ -34,8 +43,9 @@ Tout d'abord il vous faut installer nodejs, pour cela rendez vous sur le site of
 
 ##### Grunt
 Une fois nodejs installé, vous avez accès à la commande npm. 
-Lancez la console et tapez : 
-     > npm install -g grunt-cli
+Lancez la console et tapez :
+
+> npm install -g grunt-cli
 
 Si tout se passe bien, lorsque vous tapez "grunt" dans la console, vous avez une reponse et pas un message "Commmande introuvable".
 
