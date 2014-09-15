@@ -28,6 +28,9 @@ Enfin vous inserez ce code à la fin du fichier
 Créez une base de données avec phpmyadmin, nommez la eurosic et importez le fichier sql present dans le depot.
 Ensuite rendez-vous dans le fichier wp-config.php et mettez à jour les informations de base de données selon votre configuration. (Wamp login : root, Wamp password : '')
 
+Vous pouvez créer un utilisateur unique pour cette base de données avec : 
+GRANT ALL PRIVILEGES ON eurosic.* To 'itescia'@'localhost' IDENTIFIED BY 'itescia';
+
 ## Configuration du projet
 
 ### Ruby et Sass
