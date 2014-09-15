@@ -1,5 +1,5 @@
 
-1. Installation du [projet](#installation)
+1. [Installation du projet](#installation)
 2. [Processus de travail](WORKFLOW.md)
 
 
