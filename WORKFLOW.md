@@ -1,5 +1,7 @@
 ## Processus de travail
 
+### Compilation SCSS
+
 Une fois tout installé, vous pouvez vous rendre dans le dossier 
 > C:/wamp/www/itescia/wp-content/theme/campussaintchristophe/
 
