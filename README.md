@@ -1,4 +1,10 @@
-## Installation du projet
+
+1. Installation du [projet](#installation)
+2. [Processus de travail](WORKFLOW.md)
+
+
+
+## <a name="installation"></a> Installation du projet
 
 ### Mamp ou Wamp
 D'abord il faut installer mamp ou wamp sur votre PC/MAC, ou alors utiliser Vagrant si vous le souhaitez, ca ne change rien il faut un peu plus de config.
